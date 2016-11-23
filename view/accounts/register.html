@@ -1,0 +1,177 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>杭电核查系统用户注册</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="keywords" content="杭电,HDU,配置核查系统" />
+    <meta name="description" content="采用高效、智能的识别技术，可以实现对网络资产设备自动化的安全配置检测、分析，并提供专业的安全配置建议与合规性报表。大大提高安全配置检查的方便性、准确性，在节省时间成本的同时，让安全配置维护工作变得有条不紊而且简单、易于操作。" />
+    <meta name="author" content="https://github.com/EchoLsx/">
+    <link rel="shortcut icon" href="../../resource/pic/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../resource/plugin/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../resource/css/publicstyle.css">
+    <style type="text/css">
+        body{
+            font-family: "Microsoft YaHei";
+        }
+        .contain{
+        width:480px;
+        margin:0 auto;
+        padding-top: 100px;
+        }
+        .login_h2 {
+        padding: 0px;
+        font-size: 36px;
+        font-weight: normal;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .registerform{
+        width:480px;
+        margin:0 auto;
+    }
+    .registerform .form-control{
+        height:40px;
+    }
+    .registerform .loginsubmit{
+        width:100%;
+        height:40px;
+        font-size: 16px;
+    }
+    .control-label{
+        font-weight:300;
+        text-align: left;
+    }
+    .ToolHead{
+    position: fixed;
+    top:0;
+    height:84px;
+    background-color:#0076C6; 
+    border-bottom: 1px solid #007ACB;
+    box-shadow: 0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);
+}
+
+.hdulogo1 {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    z-index: 5;
+}
+.hdulogo2 {
+    position: absolute;
+    top: 18px;
+    left: 140px;
+    z-index: 5;
+}
+
+.cos-sm-3 h2 {
+    position: absolute;
+    color: #ffffff;
+    width: 300px;
+    top: 5px;
+    left: 350px;
+    z-index: 5;
+}
+
+
+
+    </style>
+</head>
+<body>
+<div class="ToolHead">
+        <div class="hdulogo">
+            <div class="hdulogo1">
+                <a href="/"><img src="../../resource/pic/crest1.png" height="60px" width="66.8px"
+                                        alt="crest1"/></a>
+            </div>
+            <div class="hdulogo2">
+                <a href="/"><img src="../../resource/pic/crest2.png" height="60px" width="200px"
+                                        alt="crest2"/></a>
+            </div>
+        </div>
+        <div class="cos-sm-3 cos-sm-3-fixed" id="aaa"><h2>配置核查系统</h2></div>
+
+
+      <!--   <div class="wrapper clearfix">
+            <h2 class="ToolLogo fl"><img src="../../resource/pic/logo.png">&nbsp核查配置系统</h2>
+        </div> -->
+</div>
+<div class="contain">
+    <h2 class="login_h2">用户注册</h2>
+    <form id="registerform" class="form-horizontal registerform" action="/r/user/save" method="post">
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="loginName">Email:</label>
+                <div class="col-sm-9">
+                    <input type="email" id="loginName" name="loginName" maxlength="50"
+                           class="required email form-control" placeholder="单位电子邮箱"
+                           aria-describedby="helpBlock"/>
+                </div>
+
+                <div class="col-sm-12 col-sm-offset-3">
+                    <span id="helpBlock" class="help-block">建议使用常用邮箱作为用户名，接收验证码</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="newPassword">密码:</label>
+                <div class="col-sm-9">
+                    <input id="newPassword" name="newPassword" type="password" maxlength="50" minlength="3"
+                           class="required form-control" placeholder="密码"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="confirmNewPassword">确认密码:</label>
+
+                <div class="col-sm-9">
+                    <input id="confirmNewPassword" name="confirmNewPassword" type="password" maxlength="50"
+                           minlength="3" equalTo="#newPassword" class="required form-control"
+                           placeholder="确认密码"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="validateCode">验证码:</label>
+
+                <div class="col-sm-5">
+                    <input type="text" id="validateCode" name="validateCode" maxlength="4"
+                           class="form-control required"/>
+                </div>
+                <div class="col-sm-4">
+                    <img src="/servlet/validateCodeServlet"
+                         onclick="$('.validateCodeRefresh').click();" class="mid validateCode"/>
+                    <a href="javascript:"
+                       onclick="$('.validateCode').attr('src','/servlet/validateCodeServlet?'+new Date().getTime());"
+                       class="mid validateCodeRefresh">看不清</a>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="emailcode">邮箱验证码:</label>
+
+                <div class="col-sm-6">
+                    <input type="text" id="emailcode" name="emailcode" class="required form-control"
+                           placeholder="从注册的邮箱中获取验证码"/>
+                </div>
+                <div class="col-sm-3">
+                    <a href="#" id="btnGenCode"
+                       class="btn btn-warning">获取邮箱验证码</a>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-10">
+                    <input id="btnSubmit" class="btn btn-primary" type="submit" value="注 册"/>
+                    <input id="btnCancel" class="btn btn-default" type="button" value="返 回"
+                           onclick="history.go(-1)"/>
+                </div>
+            </div>
+        </form>
+
+</div>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+</html>

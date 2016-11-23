@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */ 
+.body div.ww100{ min-width:100%;}
+
+/*wrapper*/
+.wrapper{ width:1200px; margin-left:auto;margin-right:auto; background:#fff; height:auto;}
+.wrapper02{ width:1200px; margin-left:auto;margin-right:auto;height:auto;}	
+/*ToolHead-begin*/
+.ToolHead{ padding:10px 0px; background-color:#ffffff; width:100%;min-width:1000px;}
+.ToolHead .ToolLogo{ width:500px; height:60px;}
+.ToolHead .ToolLogo img{ vertical-align:middle;width:270px; height:60px;}
+
+/*ToolNavbar-begin*/
+.ToolNavbar{position: relative;z-index: 104;z-index: 50;overflow: hidden;min-width: 1000px; width:100%;min-width:1000px; height: 40px;font-family: 'Microsoft YaHei';}
+.ToolNavbar .navbar-bg,.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dt,.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dd{-webkit-transition: .3s;transition: .3s;}
+.ToolNavbar-hover{overflow: visible;}
+.ToolNavbar .navbar-bg{position: absolute;width: 100%; min-width:1000px;height: 230px; background: rgba(30, 91, 151, .15); }
+.ToolNavbar .navbar-bg-top{height: 40px;border-top: 1px solid #5895d5;border-bottom: 1px solid #1d5997;background: #2f87c1;}
+.ToolNavbar .navbar-bg-top .navbar-content-box{position: absolute;top: 0;left: 0;width: 100%;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul{position: relative;float: left;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul.odd{ width:200px;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul.odd li.dd{padding: 5px 20px 5px 20px; }
+.ToolNavbar .navbar-bg-top .navbar-content-box ul.odd li.dd a{width:150px; }
+.ToolNavbar .navbar-bg-top .navbar-content-box ul.both{ width:240px;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul.both li.dd a{width:100px;float: left; text-align:left; overflow:hidden;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul.both li.dd a.rig{ text-align:right; padding-right:15px;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dt{height: 40px;line-height: 40px;font-size: 16px;text-align: center;cursor: pointer; border-left:1px solid #2f87c1; border-right:1px solid #2f87c1;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dd{filter: alpha(opacity=0);opacity: 0;padding: 5px 10px 5px 10px;height: 179px; overflow:hidden;border-left: 1px solid #3a6fa2; font-size:14px;*zoom: 1;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dd a{height: 25px;line-height: 25px;text-align: center;font-size: 14px;display:inline-block;padding-bottom: 3px;color: #c2e6fe;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dd a:hover{color: #ffcc33; text-decoration:underline;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul li.dd:after{content: '\0020';display: block;height: 0;font-size: 0;clear: both;overflow: hidden;visibility: hidden;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul:hover .dt,.active{border-color: #3381d1;background: #55a7e3;}
+.ToolNavbar .navbar-bg-top .navbar-content-box ul:hover .dd{background: #184f8b;border-color: #184f8b;}
+.ToolNavbar a,.ToolNavbar a:link,.ToolNavbar a:visited,.ToolNavbar a:hover,.ToolNavbar a:active{text-decoration: none;cursor: pointer;color: #f5f5f5;}
+.ToolNavbar-hover .navbar-bg-top .navbar-content-box ul li.dd{filter: alpha(opacity=100);opacity: 1;}
+.ToolNavbar-hover .navbar-bg{ background-color: rgba(30, 91, 151, .75);}
+/*Toolfooter*/
+
+.ToolFooter{ min-height:40px; padding:20px 0px;position: fixed;bottom: 0;width:100%;background-color: #fff;}
+.ToolFooter p{ text-align:center; font-size:12px; line-height:12px;}
+.ToolFooter p.linkbtn{ padding-bottom:10px; color:#999999; padding-top:5px;}
+.ToolFooter p.linkbtn a{ color:#999999; display:inline-block; padding:0px 10px;}
+.ToolFooter p.linkbtn a:hover{color:#ff4500;}
+.ToolFooter p.info{ color:#c0c1c4;}
+.ToolFooter p.info span{ display:inline-block; padding-right:10px; color:#c0c1c4;}
+
+
+.ToolTop {height: 30px;background-color: #fbfbfb;width: 100%;min-width: 1000px;border-bottom: 1px solid #e8e8e8;}
+.ToolTop .userbar {float: right;white-space: nowrap;}
+.ToolTop .userbar a {float: left;display: inline;margin-left: 10px;height: 30px;line-height: 30px;}
