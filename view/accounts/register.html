@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 <head>
-	<title>杭电核查系统用户注册</title>
+    <title>杭电核查系统用户注册</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0">
     <meta name="keywords" content="杭电,HDU,配置核查系统" />
@@ -101,16 +101,16 @@
     <form id="registerform" class="form-horizontal registerform" action="/r/user/save" method="post">
 
             <div class="form-group">
-                <label class="col-sm-3 control-label" for="loginName">Email:</label>
+                <label class="col-sm-3 control-label" for="loginName">用户名:</label>
                 <div class="col-sm-9">
-                    <input type="email" id="loginName" name="loginName" maxlength="50"
-                           class="required email form-control" placeholder="单位电子邮箱"
+                    <input type="text" id="loginName" name="loginName" maxlength="50"
+                           class="required  form-control" placeholder="用户名"
                            aria-describedby="helpBlock"/>
                 </div>
 
-                <div class="col-sm-12 col-sm-offset-3">
+<!--                 <div class="col-sm-12 col-sm-offset-3">
                     <span id="helpBlock" class="help-block">建议使用常用邮箱作为用户名，接收验证码</span>
-                </div>
+                </div> -->
             </div>
 
             <div class="form-group">
@@ -147,7 +147,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label class="col-sm-3 control-label" for="emailcode">邮箱验证码:</label>
 
                 <div class="col-sm-6">
@@ -160,7 +160,7 @@
                 </div>
 
 
-            </div>
+            </div> -->
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
                     <input id="btnSubmit" class="btn btn-primary" type="submit" value="注 册"/>
