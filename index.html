@@ -1,23 +1,47 @@
 <!DOCTYPE>
 <html>
 <head>
-	<title>杭电配置核查系统用户登录</title>
+	<title>杭电配置核查系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=0">
     <meta name="keywords" content="杭电,HDU,配置核查系统" />
     <meta name="description" content="采用高效、智能的识别技术，可以实现对网络资产设备自动化的安全配置检测、分析，并提供专业的安全配置建议与合规性报表。大大提高安全配置检查的方便性、准确性，在节省时间成本的同时，让安全配置维护工作变得有条不紊而且简单、易于操作。" />
     <meta name="author" content="https://github.com/EchoLsx/">
     <link rel="shortcut icon" href="resource/pic/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="resource/plugin/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resource/css/basic.css">
     <link rel="stylesheet" type="text/css" href="resource/css/publicstyle.css">
+
 </head>
+<style type="text/css">
+    .userbtn{
+        float: right;
+        z-index: 1000;
+    }
+    .usertoggle,.btn-default{
+        border:0;
+    }
+</style>
 <body>
     <div class="ww100">
 	    <div class="ToolTop  clearfix">
 	        <div class="wrapper02">
-	        	<div class="userbar">
+	        	<!-- <div class="userbar">
 	        		<a href="view/accounts/login.html">立即登录</a>	
-	        		<a href="view/accounts/register.html?returnurl=http://cas.hdu.edu.cn">注册新帐号</a></div>
+	        		<a href="view/accounts/register.html?returnurl=http://cas.hdu.edu.cn">注册新帐号</a>
+                </div> -->
+                <div class="btn-group userbtn">
+                      <button type="button" class="usertoggle btn btn-default dropdown-toggle" data-toggle="dropdown">
+                       您好，吴震东<span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人信息</a></li>
+                         <li class="divider"></li>
+                        <li><a href="#">修改密码</a></li>
+                      </ul>
+                     <button type="button" class="btn btn-default">退出</button>
+                </div>
+
 	        </div>
 	    </div>
         <div class="ToolHead">
@@ -97,6 +121,7 @@
     </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="resource/plugin/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
     //Navbar

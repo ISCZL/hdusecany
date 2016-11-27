@@ -72,7 +72,9 @@
     left: 350px;
     z-index: 5;
 }
-
+.validateCode{
+    height:40px;
+}
 
 
     </style>
@@ -108,9 +110,18 @@
                            aria-describedby="helpBlock"/>
                 </div>
 
-<!--                 <div class="col-sm-12 col-sm-offset-3">
-                    <span id="helpBlock" class="help-block">建议使用常用邮箱作为用户名，接收验证码</span>
-                </div> -->
+            </div>
+            <div class="form-group">
+                <label class="col-sm-3 control-label" for="loginName">邮箱:</label>
+                <div class="col-sm-9">
+                    <input type="email" id="loginEmail" name="loginEmail" maxlength="50"
+                           class="required  form-control" placeholder="常用邮箱"
+                           aria-describedby="helpBlock"/>
+                </div>
+
+                <div class="col-sm-12 col-sm-offset-3">
+                    <span id="helpBlock" class="help-block">建议使用常用邮箱，用于接收验证码</span>
+                </div>
             </div>
 
             <div class="form-group">
@@ -131,23 +142,23 @@
                 </div>
             </div>
 
-            <div class="form-group">
+           <!--  <div class="form-group">
                 <label class="col-sm-3 control-label" for="validateCode">验证码:</label>
 
-                <div class="col-sm-5">
+                <div class="col-sm-5 checkinput">
                     <input type="text" id="validateCode" name="validateCode" maxlength="4"
-                           class="form-control required"/>
+                           class="form-control required"/ placeholder="输入验证码">
                 </div>
                 <div class="col-sm-4">
-                    <img src="/servlet/validateCodeServlet"
-                         onclick="$('.validateCodeRefresh').click();" class="mid validateCode"/>
+                    <img src="../..//web/checkcode.php" onclick="$('.validateCodeRefresh').click();" class="mid validateCode "/>
                     <a href="javascript:"
-                       onclick="$('.validateCode').attr('src','/servlet/validateCodeServlet?'+new Date().getTime());"
-                       class="mid validateCodeRefresh">看不清</a>
+                    onclick="$('.validateCode').attr('src','../..//web/checkcode.php?'+new Date().getTime());"
+                    class="mid validateCodeRefresh">看不清</a>
+               
                 </div>
-            </div>
+            </div> -->
 
-            <!-- <div class="form-group">
+            <div class="form-group">
                 <label class="col-sm-3 control-label" for="emailcode">邮箱验证码:</label>
 
                 <div class="col-sm-6">
@@ -156,11 +167,11 @@
                 </div>
                 <div class="col-sm-3">
                     <a href="#" id="btnGenCode"
-                       class="btn btn-warning">获取邮箱验证码</a>
+                       class="btn btn-warning btnGenCode">获取验证码</a>
                 </div>
 
 
-            </div> -->
+            </div>
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
                     <input id="btnSubmit" class="btn btn-primary" type="submit" value="注 册"/>

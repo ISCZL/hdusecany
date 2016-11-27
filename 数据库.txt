@@ -1,0 +1,8 @@
+/*用户信息表*/
+create table users(
+id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+user VARCHAR(32) not null,
+pwd VARCHAR(32) not null,
+perm INT(2) DEFAULT 0,
+time INT(10) not null
+)ENGINE=MyISAM DEFAULT CHARSET=utf8;
